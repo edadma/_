@@ -1,13 +1,6 @@
-package xyz.hyperreal.ramfile
+package xyz.hyperreal.name
 
 
 object Main extends App {
 	
-	val file = new RamFile
-	
-	file.writeUTF( "testasdfas" )
-	file.writeInt( 123654 )
-	file.seek( 0 )
-	println( file.readUTF )
-	println( file.readInt )
 }
