@@ -1,8 +1,8 @@
-name := "ramfile"
+name := "project"
 
 version := "0.1"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.0"
 
 scalacOptions ++= Seq( "-deprecation", "-feature", "-language:postfixOps", "-language:implicitConversions", "-language:existentials" )
 
@@ -25,6 +25,21 @@ libraryDependencies ++= Seq(
 //	"org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.4",
 //	"org.scala-lang.modules" %% "scala-swing" % "1.0.2"
 //)
+
+libraryDependencies ++= {
+	val akkaV = "2.4.12"
+	val sprayV = "1.3.4"
+	Seq(
+//		"io.spray"          %% "spray-can"     % sprayV,
+//		"io.spray"          %% "spray-routing" % sprayV,
+//		"io.spray"          %% "spray-json"    % "1.3.2",
+//		"io.spray"          %% "spray-testkit" % sprayV   % "test",
+		"com.typesafe.akka" %% "akka-actor"    % akkaV
+//		"com.typesafe.akka" %% "akka-remote"   % akkaV,
+//		"com.typesafe.akka" %% "akka-testkit"  % akkaV    % "test",
+//		"org.specs2"        %% "specs2-core"   % "2.3.11" % "test"
+	)
+}
 
 mainClass in (Compile, run) := Some( "xyz.hyperreal." + name.value + ".Main" )
 
