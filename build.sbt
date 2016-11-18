@@ -18,13 +18,13 @@ resolvers += "Hyperreal Repository" at "https://dl.bintray.com/edadma/maven"
 
 libraryDependencies ++= Seq(
 	"org.scalatest" %% "scalatest" % "3.0.0" % "test",
-	"org.scalacheck" %% "scalacheck" % "1.13.2" % "test"
+	"org.scalacheck" %% "scalacheck" % "1.13.4" % "test"
 )
 
-//libraryDependencies ++= Seq(
+libraryDependencies ++= Seq(
 //	"org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.4",
 //	"org.scala-lang.modules" %% "scala-swing" % "1.0.2"
-//)
+)
 
 libraryDependencies ++= {
 	val akkaV = "2.4.12"
@@ -34,16 +34,16 @@ libraryDependencies ++= {
 //		"io.spray"          %% "spray-routing" % sprayV,
 //		"io.spray"          %% "spray-json"    % "1.3.2",
 //		"io.spray"          %% "spray-testkit" % sprayV   % "test",
-		"com.typesafe.akka" %% "akka-actor"    % akkaV
+//		"com.typesafe.akka" %% "akka-actor"    % akkaV
 //		"com.typesafe.akka" %% "akka-remote"   % akkaV,
 //		"com.typesafe.akka" %% "akka-testkit"  % akkaV    % "test",
 //		"org.specs2"        %% "specs2-core"   % "2.3.11" % "test"
 	)
 }
 
-mainClass in (Compile, run) := Some( "xyz.hyperreal." + name.value + ".Main" )
+mainClass in (Compile, run) := Some( "xyz.hyperreal." + name.value.replace('-', '_') + ".Main" )
 
-mainClass in assembly := Some( "xyz.hyperreal." + name.value + ".Main" )
+mainClass in assembly := Some( "xyz.hyperreal." + name.value.replace('-', '_') + ".Main" )
 
 assemblyJarName in assembly := name.value + "-" + version.value + ".jar"
 
