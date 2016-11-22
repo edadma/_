@@ -1,8 +1,8 @@
-name := "ramfile"
+name := "project"
 
 version := "0.1"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.0"
 
 scalacOptions ++= Seq( "-deprecation", "-feature", "-language:postfixOps", "-language:implicitConversions", "-language:existentials" )
 
@@ -18,7 +18,7 @@ resolvers += "Hyperreal Repository" at "https://dl.bintray.com/edadma/maven"
 
 libraryDependencies ++= Seq(
 	"org.scalatest" %% "scalatest" % "3.0.0" % "test",
-	"org.scalacheck" %% "scalacheck" % "1.13.2" % "test"
+	"org.scalacheck" %% "scalacheck" % "1.13.4" % "test"
 )
 
 //libraryDependencies ++= Seq(
