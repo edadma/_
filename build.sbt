@@ -1,4 +1,4 @@
-name := "project"
+name := "_"
 
 version := "0.1"
 
@@ -62,7 +62,7 @@ publishArtifact in Test := false
 
 pomIncludeRepository := { _ => false }
 
-licenses := Seq("MIT" -> url("http://opensource.org/licenses/MIT"))
+licenses := Seq("MIT" -> url("https://opensource.org/licenses/ISC"))
 
 homepage := Some(url("https://github.com/edadma/" + name.value))
 
