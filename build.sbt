@@ -2,7 +2,9 @@ name := "project"
 
 version := "0.1"
 
-scalaVersion := "2.12.0"
+scalaVersion := "2.12.2"
+
+crossScalaVersions := Seq( "2.11.11" )
 
 scalacOptions ++= Seq( "-deprecation", "-feature", "-language:postfixOps", "-language:implicitConversions", "-language:existentials" )
 
@@ -22,22 +24,29 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-//	"org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.4",
-//	"org.scala-lang.modules" %% "scala-swing" % "1.0.2"
+//	"org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.6",
+//	"org.scala-lang.modules" %% "scala-xml" % "1.0.6"
+//	"org.scala-lang.modules" %% "scala-swing" % "2.0.0"
 )
 
 libraryDependencies ++= {
-	val akkaV = "2.4.12"
-	val sprayV = "1.3.4"
+	val akkaV = "2.5.3"
 	Seq(
-//		"io.spray"          %% "spray-can"     % sprayV,
-//		"io.spray"          %% "spray-routing" % sprayV,
-//		"io.spray"          %% "spray-json"    % "1.3.2",
-//		"io.spray"          %% "spray-testkit" % sprayV   % "test",
 //		"com.typesafe.akka" %% "akka-actor"    % akkaV
 //		"com.typesafe.akka" %% "akka-remote"   % akkaV,
 //		"com.typesafe.akka" %% "akka-testkit"  % akkaV    % "test",
 //		"org.specs2"        %% "specs2-core"   % "2.3.11" % "test"
+	)
+}
+
+libraryDependencies ++= {
+	val akka_http = "10.0.7"
+	Seq(
+		"com.typesafe.akka" %% "akka-http-core"       % akka_http,
+		"com.typesafe.akka" %% "akka-http"            % akka_http,
+		"com.typesafe.akka" %% "akka-http-testkit"    % akka_http,
+		"com.typesafe.akka" %% "akka-http-spray-json" % akka_http,
+		"com.typesafe.akka" %% "akka-http-jackson"    % akka_http
 	)
 }
 
@@ -57,7 +66,7 @@ licenses := Seq("MIT" -> url("http://opensource.org/licenses/MIT"))
 
 homepage := Some(url("https://github.com/edadma/" + name.value))
 
-pomExtra := (
+pomExtra :=
   <scm>
     <url>git@github.com:edadma/{name.value}.git</url>
     <connection>scm:git:git@github.com:edadma/{name.value}.git</connection>
@@ -68,4 +77,4 @@ pomExtra := (
       <name>Edward A. Maxedon, Sr.</name>
       <url>https://github.com/edadma</url>
     </developer>
-  </developers>)
+  </developers>
