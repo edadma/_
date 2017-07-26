@@ -39,16 +39,19 @@ libraryDependencies ++= {
 	)
 }
 
-libraryDependencies ++= {
-	val akka_http = "10.0.7"
-	Seq(
-		"com.typesafe.akka" %% "akka-http-core"       % akka_http,
-		"com.typesafe.akka" %% "akka-http"            % akka_http,
-		"com.typesafe.akka" %% "akka-http-testkit"    % akka_http,
-		"com.typesafe.akka" %% "akka-http-spray-json" % akka_http,
-		"com.typesafe.akka" %% "akka-http-jackson"    % akka_http
-	)
-}
+//libraryDependencies ++= {
+//	val akka_http = "10.0.7"
+//	Seq(
+//		"com.typesafe.akka" %% "akka-http-core"       % akka_http,
+//		"com.typesafe.akka" %% "akka-http"            % akka_http,
+//		"com.typesafe.akka" %% "akka-http-testkit"    % akka_http,
+//		"com.typesafe.akka" %% "akka-http-spray-json" % akka_http,
+//		"com.typesafe.akka" %% "akka-http-jackson"    % akka_http
+//	)
+//}
+
+libraryDependencies ++= Seq(
+)
 
 mainClass in (Compile, run) := Some( "xyz.hyperreal." + name.value.replace('-', '_') + ".Main" )
 
