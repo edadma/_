@@ -2,13 +2,11 @@ name := "_"
 
 version := "0.1"
 
-scalaVersion := "2.12.3"
+scalaVersion := "2.12.4"
 
-crossScalaVersions := Seq( "2.11.11" )
+//crossScalaVersions := Seq( "2.11.11" )
 
-scalacOptions ++= Seq( "-deprecation", "-feature", "-language:postfixOps", "-language:implicitConversions", "-language:existentials" )
-
-incOptions := incOptions.value.withNameHashing( true )
+scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials" )
 
 organization := "xyz.hyperreal"
 
@@ -29,8 +27,12 @@ libraryDependencies ++= Seq(
 //	"org.scala-lang.modules" %% "scala-swing" % "2.0.0"
 )
 
+//libraryDependencies ++= Seq(
+//  "com.typesafe" % "config" % "1.3.1"
+//)
+
 libraryDependencies ++= {
-	val akkaV = "2.5.3"
+	val akkaV = "2.5.11"
 	Seq(
 //		"com.typesafe.akka" %% "akka-actor"    % akkaV
 //		"com.typesafe.akka" %% "akka-remote"   % akkaV,
@@ -40,7 +42,7 @@ libraryDependencies ++= {
 }
 
 //libraryDependencies ++= {
-//	val akka_http = "10.0.7"
+//	val akka_http = "10.0.11"
 //	Seq(
 //		"com.typesafe.akka" %% "akka-http-core"       % akka_http,
 //		"com.typesafe.akka" %% "akka-http"            % akka_http,
