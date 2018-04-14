@@ -18,6 +18,4 @@ project/plugins/project/
 
 *~
 .directory
-.idea/*
-!idea/codeStyles
-!idea/inspectionProfiles
+.idea/
