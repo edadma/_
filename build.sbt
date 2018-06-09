@@ -59,6 +59,8 @@ libraryDependencies ++= {
 libraryDependencies ++= Seq(
 )
 
+coverageExcludedPackages := ".*Main"
+
 mainClass in (Compile, run) := Some( "xyz.hyperreal." + name.value.replace('-', '_') + ".Main" )
 
 mainClass in assembly := Some( "xyz.hyperreal." + name.value.replace('-', '_') + ".Main" )
