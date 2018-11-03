@@ -2,7 +2,7 @@ name := "_"
 
 version := "0.1"
 
-scalaVersion := "2.12.6"
+scalaVersion := "2.12.7"
 
 //crossScalaVersions := Seq( "2.11.11" )
 
