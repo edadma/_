@@ -2,7 +2,9 @@ name := "_"
 
 version := "0.1"
 
-scalaVersion := "2.12.8"
+scalaVersion := "2.13.0"
+
+crossScalaVersions := Seq( "2.12.9" )
 
 scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials" )
 
@@ -13,12 +15,12 @@ resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/release
 resolvers += "Hyperreal Repository" at "https://dl.bintray.com/edadma/maven"
 
 libraryDependencies ++= Seq(
-	"org.scalatest" %% "scalatest" % "3.0.5" % "test",
+	"org.scalatest" %% "scalatest" % "3.0.8" % "test",
 	"org.scalacheck" %% "scalacheck" % "1.14.0" % "test"
 )
 
 libraryDependencies ++= Seq(
-//	"org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.0",
+//	"org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2",
 //	"org.scala-lang.modules" %% "scala-xml" % "1.0.6"
 //	"org.scala-lang.modules" %% "scala-swing" % "2.1.0"
 )
