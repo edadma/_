@@ -4,8 +4,6 @@ version := "0.1"
 
 scalaVersion := "2.13.0"
 
-crossScalaVersions := Seq( "2.12.9" )
-
 scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials" )
 
 organization := "xyz.hyperreal"
@@ -21,12 +19,12 @@ libraryDependencies ++= Seq(
 
 libraryDependencies ++= Seq(
 //	"org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2",
-//	"org.scala-lang.modules" %% "scala-xml" % "1.0.6"
-//	"org.scala-lang.modules" %% "scala-swing" % "2.1.0"
+//	"org.scala-lang.modules" %% "scala-xml" % "1.2.0"
+//	"org.scala-lang.modules" %% "scala-swing" % "2.1.1"
 )
 
 //libraryDependencies ++= Seq(
-//  "com.typesafe" % "config" % "1.3.3"
+//  "com.typesafe" % "config" % "1.3.4"
 //)
 
 //libraryDependencies ++= Seq(
