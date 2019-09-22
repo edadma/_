@@ -2,7 +2,7 @@ name := "_"
 
 version := "0.1"
 
-scalaVersion := "2.13.0"
+scalaVersion := "2.13.1"
 
 scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials" )
 
@@ -32,7 +32,7 @@ libraryDependencies ++= Seq(
 //)
 
 libraryDependencies ++= {
-	val akkaV = "2.5.12"
+	val akkaV = "2.5.25"
 	Seq(
 //		"com.typesafe.akka" %% "akka-actor"    % akkaV
 //		"com.typesafe.akka" %% "akka-remote"   % akkaV,
@@ -42,7 +42,7 @@ libraryDependencies ++= {
 }
 
 //libraryDependencies ++= {
-//	val akka_http = "10.1.1"
+//	val akka_http = "10.1.10"
 //	Seq(
 //		"com.typesafe.akka" %% "akka-http-core"       % akka_http,
 //		"com.typesafe.akka" %% "akka-http"            % akka_http,
