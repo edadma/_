@@ -8,6 +8,8 @@ scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:post
 
 organization := "xyz.hyperreal"
 
+Global / onChangedBuildSource := ReloadOnSourceChanges
+
 resolvers += "Typesafe Repository" at "https://repo.typesafe.com/typesafe/releases/"
 
 resolvers += "Hyperreal Repository" at "https://dl.bintray.com/edadma/maven"
