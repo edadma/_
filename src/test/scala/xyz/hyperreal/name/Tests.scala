@@ -1,14 +1,14 @@
 package xyz.hyperreal.name
 
-import org.scalatest._
-import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
+import org.scalatest.freespec.AnyFreeSpec
+import org.scalatest.matchers.should.Matchers
+import xyz.hyperreal.char_reader.Testing._
 
+class Tests extends AnyFreeSpec with Matchers {
 
-class Tests extends FreeSpec with ScalaCheckPropertyChecks with Matchers {
-	
-	"tests" in {
-//		a [RuntimeException] should be thrownBy {interpret( """ (= 1 1] """ )}
-//		interpret( """ (cdr '(a)) """ ) shouldBe SNil
-	}
-	
+  "test name" in {
+    (3 + 4) shouldBe 7
+  }
+
 }
+
