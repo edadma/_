@@ -4,7 +4,7 @@ version := "0.1.0-snapshot.1"
 
 scalaVersion := "2.13.3"
 
-scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials" )
+scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials", "-language:dynamics" )
 
 organization := "xyz.hyperreal"
 
